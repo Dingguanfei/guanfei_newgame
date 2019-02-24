@@ -1,0 +1,79 @@
+熟悉Jupyter notebook
+  python环境和版本
+  工具：numpy(np),scipy,sklearn,pandas(pd),keras(.backend as K),tensorflow(tf)
+  安装tensorflow和keras
+  jupyter notebook基本使用
+  markdown用法
+Anaconda管理python环境’下载anaconda SW,open jupyter      notebook'可实时测试小程序
+  python脚本语言：解释，运行
+  编译语言：edit,conpile,link,run
+Kernel用于转换python版本
+Anaconda添加python环境
+  conda create -n py27 python=2.7'安装py27
+  source activate py27'激活python2.7
+  pip install ipykernel'pip小工具安装python2.7相关工具
+  python -m ipykernel install --user‘加到可选的kernel中
+  /Users/dingguanfei/Library/Jupyter/kernels/python2'my kernel space address
+  新起的终端 jupyter notebook'新开notebook
+  退出环境 source deactivate
+  jupyter kernelspec list'查看已有kernel list
+安装决策树可视化工具Graphviz
+  https://graphviz.gitlab.io/download/
+  Mac: homebrew;conda install graphviz;pip install graphviz
+  windows:调整path after"conda install graphviz", path:
+  C:\user\username\anaconda3\library\bin\graphviz
+  modify graphviz环境变量:control panel>system and security>advanced setting>环境变量>新建系统变量（GRAPHVIZ_DOT,安装的path)
+  Mac install graphviz
+  1.安装homebrew 
+  打开终端复制、粘贴以下命令：
+
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  1
+  2.安装Graphviz 
+  homebrew安装完毕后运行 brew install graphviz即可
+
+  注：运行第2步时可能会提示-bash: brew: command not found 
+  解决办法： 
+  终端输入sudo vim .bash_profile， 
+  输入i进入输入模式， 
+  添加export PATH="/usr/local/bin:$PATH" , 
+  按esc键退出输入模式， 
+  输入:wq退出并保存 
+  最后输入source .bash_profile使配置生效。 
+  （注意: 和空格也要输入，bash_profile保存时可能会警告，:w!强制保存即可，更多vim命令参考http://www.cnblogs.com/usergaojie/p/4583796.html）
+几个重要工具包介绍：
+  numpy:科学计算基础
+  scipy:科学计算工具
+  pandas:dataframe数据结构，大杀器
+  sklearn:非常重要，机器学习包
+  keras.backend:深度学习
+  tensorflow：深度学习
+  
+  numpy定义了python进行矩阵数值计算的基础
+  np.add(A,B)
+  np.subtract(A,B)
+  np.dot(C,D)
+  np.matmul(C,D)##C@D
+  np.multiply(C,D)##C*D
+  
+  deep learning 矩阵操作
+  list []是python自己的数据结构
+  np.array 是numpy自己的数组数列()
+  *(np.multiply) 元素与元素相乘
+  np.dot np.matmul @ 矩阵相乘
+  
+  np.dot和np.matmul区别
+  都是矩阵乘法
+  matmul中，禁止矩阵与标量的乘法
+  matmul中，矢量相乘的内积运算中，matmul与dot无差别
+  matmul中，多维的矩阵，将前n-2维视为后2维的元素后，进行乘法运算
+  
+  安装tensorflow和keras
+  conda create -n tensorflow python=3.5
+  source activate tensorflow
+  pip install --ignor_installed --upgrade tensorflow
+  tensorflow匹配度好python3.5,安装py3.5环境
+   conda create -n py35 python=3.5
+   source activate py35
+   pip install tensorflow
+   
